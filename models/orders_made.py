@@ -1,5 +1,5 @@
-from films import Film
-from orders import Order
+from models.films import Film
+from models.orders import Order
 
 film1 = Film("The Fellowship of the Ring", 10, 178)
 film2 = Film("The Two Towers", 10, 179)
@@ -9,3 +9,5 @@ film5 = Film("Elf", 5, 97)
 
 order1 = Order("Phil", "02/11/21", [film1, film2, film3])
 order2 = Order("Nick", "24/12/21", [film4, film5])
+
+orders_list = [order1, order2]
