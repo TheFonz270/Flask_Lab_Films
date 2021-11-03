@@ -4,19 +4,22 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
     <title>Orders</title>
 </head>
 <body>
     <h1>Order List</h1>
-    <ol>
+    <Main>
+    <ol class="order_card">
     {% for order in orders_list %}
-        <li><a href="/order/{{orders_list.index(order)}}">{{order_link}}{{order.name}} : {{order.date}}</a> : {{order.quantity}}</li>
+        <li><a href="/order/{{orders_list.index(order)}}">{{order_link}}{{order.name}} : {{order.date}}</a> : {{order.quantity}}
         <ol>
         {% for film in order.films%}
-            <li>{{film.title}} : £{{film.price}} : {{film.runtime}} minutes</li>
+            <li>{{film.title}} : £{{film.price}} : {{film.runtime}} minutes</li></li>
         {% endfor %}
         </ol>
     {% endfor %}
     </ol>
+    </Main>
 </body>
 </html>

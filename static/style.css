@@ -1,0 +1,33 @@
+body {
+    font-family:Arial, Helvetica, sans-serif
+}
+
+ol {
+    margin:0px;
+}
+
+main > ol {
+    margin-bottom:0 0 10px;
+}
+
+ol > li {
+    
+}
+
+main > .order_card {
+    display:flex;
+    justify-content: center;
+}
+
+.order_card > li {
+    margin:10px 25px;
+    padding:15px;
+    background-color:#dddddd;
+    border-radius: 25px;
+    display:flex;
+    list-style:none;
+}
+
+.order_card >li > ol > li {
+    padding-bottom:10px;
+} 
